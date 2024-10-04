@@ -43,3 +43,14 @@ def user_edit(request, pk):
     # htmlで読み込むformを定義
     context = {"form": form}
     return render(request, "user/edit.html", context)
+
+def search(request):
+    query = request.GET.get('query')
+
+    if query:
+        users = User.objects.filter(
+            name__icontains=query)
+    else:
+        users = User.objects.all()
+    context = {"users": users}
+    return render(request, "search/index.html", context)
