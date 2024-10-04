@@ -15,3 +15,5 @@ DATABASES = {
         },
     }
 }
+
+CSRF_TRUSTED_ORIGINS　= [ "https://django.ksk318.me:8000" ]
