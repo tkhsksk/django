@@ -11,13 +11,5 @@
 	<button type="submit" value="submit">登録</button>
 </form>
 
-{% for user in users %}
-<tr>
-  <td>{{user.id}}</td>
-  <td>{{user.name}}</td>
-  <td><a href="{% url 'user_edit' user.id %}">編集</a></td>
-<tr>
-{% endfor %}
-
 </body>
 </html>
